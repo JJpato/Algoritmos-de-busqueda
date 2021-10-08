@@ -4,6 +4,7 @@ public class App {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         DFS dfs = new DFS();
+        BFS bfs = new BFS();
         Vertex a = new Vertex("a");
         Vertex b = new Vertex("b");
         Vertex c = new Vertex("c");
@@ -32,8 +33,12 @@ public class App {
         Vertex vSearsh = new Vertex(scan.nextLine());
 
         System.out.println("\nResultados de busqueda: ");
+        System.out.println("Busqueda primero en amplitud: ");
+        //dfs.dfs(s, vSearsh);
+        System.out.println("\n");
+        System.out.println("Busqueda primero en anchura: ");
+        bfs.bfs(s, vSearsh);
 
-        dfs.dfs(s, vSearsh);
-
+        scan.close();
     }
 }
